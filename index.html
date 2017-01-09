@@ -40,28 +40,40 @@
 </picture>
 </div>
   <h1 class="intro-promo__site-logo-text"><span>Jwood</span>Photography</h1>
-  <a href="#about-me" class="intro-promo__scroll-link"><span>Scroll down to see more</span>
-  	<img class="intro-promo__more-icon img-responsive" src="image/double-arrow.png" alt="Link to get more information"></img>
+  <a href="#about-me" class="scroll-link scroll-link--white"><span>Scroll down to see more</span>
+  	<img class="scroll-link__more-icon img-responsive" src="image/double-arrow.png" alt="Link to get more information"></img>
   </a>
 </section>
 </div> <!--.background-wrapper-->
 <section id="about-me" class="about-me">
+<div class="container-centered">
   <ul class="site-nav site-nav--grey flex-centered">
   <li><a href="#home">Home</a></li>
   <li><a href="#about-me">About me</a></li>
   <li><a href="#portfolio">Portfolio</a></li>
   <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="container">
-  <div clas="about-me__description row">
+  </div>
+  <div class="container-fluid">
+  <div class="about-me__description row">
   <div class="about-me__photo col-xs-12 col-md-6">
-  <img class="img-responsive" src="image/jason-wood-photo.jpg" alt="Jason Wood's photo">
+  <picture>
+        <source media="(min-width: 1700px)" srcset="image/jason-wood-photo.jpg">
+        <img class="about-me__photo-img img-responsive" src="image/jason-wood-photo-md.jpg" alt="Jason Wood's photo">
+</picture>
   </div>
    <div class="about-me__text col-xs-12 col-md-6">
    	<h2 class="about-me__heading">About me</h2>
+    <p class="about-me__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="about-me__content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <img class="about-me__signature img-responsive" src="image/signature.png" alt="Jason Wood's dignature">
+   </div>
    </div>
   </div>
-  </div>
+  <a href="#portfolio" class="scroll-link scroll-link--grey"><span>Scroll down to see more</span>
+    <img class="scroll-link__more-icon img-responsive" src="image/double-arrow-grey.png" alt="Link to get more information"></img>
+  </a>
+  </div><!--.container-->
 </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>	

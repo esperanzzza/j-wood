@@ -2,15 +2,20 @@
     font-weight: 300;
     font-style: normal;
     font-family: 'Nexa Light';
-    src: url('../fonts/Nexa Light/Nexa Light.ttf') format('ttf'), url('../fonts/Nexa Light/Nexa Light.ttf') format('eot'), url('../fonts/Nexa Light/Nexa Light.ttf') format('otf'), url('../fonts/Nexa Light/Nexa Light.ttf') format('woff'), url('../fonts/Nexa Light/Nexa Light.ttf') format('svg');
+    src: url('../fonts/Nexa Light/Nexa Light.ttf') format('ttf'), url('../fonts/Nexa Light/Nexa Light.ttf') format('eot'), url('../fonts/Nexa Light/Nexa Light.otf') format('otf'), url('../fonts/Nexa Light/Nexa Light.woff') format('woff'), url('../fonts/Nexa Light/Nexa Light.svg') format('svg');
 }
 @font-face {
     font-weight: 700;
     font-style: normal;
     font-family: 'Nexa Bold'; 
-    src: url('../fonts/Nexa Bold/Nexa Bold.ttf') format('ttf'), url('../fonts/Nexa Bold/Nexa Bold.ttf') format('eot'), url('../fonts/Nexa Bold/Nexa Bold.ttf') format('otf'), url('../fonts/Nexa Bold/Nexa Bold.ttf') format('woff'), url('../fonts/Nexa Bold/Nexa Bold.ttf') format('svg');
+    src: url('../fonts/Nexa Bold/Nexa Bold.ttf') format('ttf'), url('../fonts/Nexa Bold/Nexa Bold.eot') format('eot'), url('../fonts/Nexa Bold/Nexa Bold.otf') format('otf'), url('../fonts/Nexa Bold/Nexa Bold.woff') format('woff'), url('../fonts/Nexa Bold/Nexa Bold.svg') format('svg');
 }
-
+@font-face {
+    font-weight: 300;
+    font-style: normal;
+    font-family: 'Open Sans'; 
+    src: url('../fonts/open-sans/OpenSans-Light.ttf') format('ttf'), url('../fonts/open-sans/OpenSans-Light.eot') format('eot'), url('../fonts/open-sans/OpenSans-Light.otf') format('otf'), url('../fonts/open-sans/OpenSans-Light.woff') format('woff');
+}
 html {
 	font-size: 16px;
 }
@@ -28,16 +33,13 @@ ul {
   margin: 0;
 }
 
-a {
-  color: #f1f1f1;
-}
-a:hover, a:focus {
-  text-decoration: none;
-  color: #f1f1f1;
-}
 h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
 }
 .container-centered {
 	margin: 0 auto;
@@ -91,7 +93,7 @@ h1 {
     display: none;
     }
 
-	.intro-promo__scroll-link span {
+	.scroll-link span {
 	font-size: 1.125rem;
 	font-family: 'Nexa Bold';
 	}
@@ -99,6 +101,14 @@ h1 {
     h1 {
 	font-size: 3.75rem;
 	margin-bottom: 140px;
+	}
+    .about-me__description {
+    padding: 0 4%;
+    }
+
+	.about-me__heading {
+	font-size: 3.75rem;
+    line-height: 7.5rem;
 	}
 }
 
@@ -120,6 +130,7 @@ h1 {
 .intro-promo {
 	text-align: center;
 }
+
 .intro-promo__site-logo {
 	position: relative;
 }
@@ -133,14 +144,7 @@ h1 {
 	margin-bottom: 25px;
 }
 
-.intro-promo__scroll-link:hover {
-	border-bottom: 1px solid #f1f1f1;
-}
-
-.intro-promo__scroll-link span {
-	margin-bottom: 25px;
-}
-.intro-promo__more-icon {
+.scroll-link__more-icon {
 	margin: 0 auto;
 	margin-top: 25px;
 	margin-bottom: 50px;
@@ -148,6 +152,7 @@ h1 {
 .site-nav {
 	display: flex;
 	justify-content: center;
+	border-bottom: 2px solid #bebebe;
 }
 .site-nav li {
 	margin-right: 80px;
@@ -157,6 +162,7 @@ h1 {
 }
 .site-nav--grey {
 	color: #fff;
+	margin-bottom: 75px;
 }
 .site-nav a {
 	color: #bebebe;
@@ -164,6 +170,7 @@ h1 {
 .site-nav a:hover {
 	color: #5e5e5e;
 }
+
 @media (max-width: 768px) {
 	.site-nav {
 		display: none;
@@ -171,4 +178,57 @@ h1 {
 	.main-nav__main-navigation li:first-child {
 		display: none;
 	}
+.about-me__heading {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: center;
 }
+.about-me__description {
+	padding: 5%;
+}
+.about-me__photo-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+}
+
+.about-me__content {
+	text-transform: none;
+	line-height: 3.125rem;
+}
+.about-me__content:first-of-type {
+    margin-bottom: 35px;
+	}
+.about-me__content:last-of-type {
+	margin-bottom: 70px;
+}
+@media (min-width: 992px and max-width: 1300px) {
+	.about-me__text {
+		clear: left;
+	}
+}
+.scroll-link {
+	font-size: 1.125rem;
+}
+.scroll-link--white {
+	color: #f1f1f1;
+}
+.scroll-link--grey {
+	display: block;
+	margin: 0 auto;
+	margin-top: 70px;
+	text-align: center;
+	color: #bebebe;
+}
+
+
+.scroll-link--grey:hover, .scroll-link--grey:focus {
+	color: #bebebe;
+	text-decoration: underline;
+}
+.scroll-link--white:hover, .scroll-link--white:focus  {
+	color: #f1f1f1;
+	text-decoration: underline;
+}
+
+
