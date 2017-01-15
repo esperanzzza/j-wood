@@ -1,2 +1,2 @@
-# j-wood
-EasyStartinIT project
+# J-wood
+Responsive landing
