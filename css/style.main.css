@@ -51,11 +51,19 @@ a:hover, a:focus {
   	width: 100%;
   	height: 100%;
   	background-size: cover;
+  	margin-bottom: 75px;
 }
 .main-header {
-	border-bottom: 2px solid #ffffff;
-	margin-bottom: 145px;
+	margin: 0 auto;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	padding-bottom: 20px;
 }
+.main-header .container-centered {
+	border-bottom: 2px solid #ffffff;
+}
+
 .main-nav {
 	background: none;
 	border: none;
@@ -76,8 +84,8 @@ h1 {
 	body {
 	font-size: 1.5rem;
 	}
-	.main-nav, .site-nav {
-	padding: 40px 0;
+	.main-nav {
+	padding-top: 16px;
 	}
 	.main-nav__main-navigation li {
 	margin-right: 50px;
@@ -97,19 +105,49 @@ h1 {
 	font-size: 1.125rem;
 	font-family: 'Nexa Bold';
 	}
+	.contacts__social-icon:hover {
+	fill: red;
+	}
 
     h1 {
 	font-size: 3.75rem;
 	margin-bottom: 140px;
 	}
+	.intro-promo {
+	padding-top: 249px;
+	}
     .about-me__description {
     padding: 0 4%;
     }
 
-	.about-me__heading {
+	.about-me__heading, h2.portfolio__heading {
 	font-size: 3.75rem;
     line-height: 7.5rem;
 	}
+	.portfolio {
+	margin-bottom: 200px;
+	}
+	.portfolio__gallery {
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	}
+	.contacts h2, p {
+	line-height: 7.5rem;
+	text-align: center;
+	}
+	.contacts h2 {
+	font-size: 1.875rem;
+}
+    .contacts__email-address {
+    font-size: 3.75rem;
+    }
+    .contacts__phone-number {
+    font-size: 3rem;
+    }
+    .contacts__social-icons {
+    margin-bottom: 200px;
+    }
 }
 
 .navbar-default .navbar-brand {
@@ -129,6 +167,8 @@ h1 {
 
 .intro-promo {
 	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 50px;
 }
 
 .intro-promo__site-logo {
@@ -147,28 +187,6 @@ h1 {
 .scroll-link__more-icon {
 	margin: 0 auto;
 	margin-top: 25px;
-	margin-bottom: 50px;
-}
-.site-nav {
-	display: flex;
-	justify-content: center;
-	border-bottom: 2px solid #bebebe;
-}
-.site-nav li {
-	margin-right: 80px;
-}
-.site-nav li:last-child {
-	margin-right: 0;
-}
-.site-nav--grey {
-	color: #fff;
-	margin-bottom: 75px;
-}
-.site-nav a {
-	color: #bebebe;
-	}
-.site-nav a:hover {
-	color: #5e5e5e;
 }
 
 @media (max-width: 768px) {
@@ -190,11 +208,33 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+.portfolio__gallery {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
+.contacts h2, p {
+	text-align: center;
+	line-height: 3.75rem;
+}
+.contacts__email-address {
+	font-size: 2rem;
 }
 
+.contacts__phone-number {
+	font-size: 1rem;
+}
+.contacts__social-icons {
+	margin-bottom: 100px;
+}
+}
+.about-me {
+	padding-bottom: 50px;
+}
 .about-me__content {
 	text-transform: none;
 	line-height: 3.125rem;
+	text-align: left;
 }
 .about-me__content:first-of-type {
     margin-bottom: 35px;
@@ -202,25 +242,19 @@ h1 {
 .about-me__content:last-of-type {
 	margin-bottom: 70px;
 }
-@media (min-width: 992px and max-width: 1300px) {
-	.about-me__text {
-		clear: left;
-	}
-}
 .scroll-link {
+	display: block;
+	margin: 0 auto;
 	font-size: 1.125rem;
+	text-align: center;
 }
 .scroll-link--white {
 	color: #f1f1f1;
 }
 .scroll-link--grey {
-	display: block;
-	margin: 0 auto;
 	margin-top: 70px;
-	text-align: center;
 	color: #bebebe;
 }
-
 
 .scroll-link--grey:hover, .scroll-link--grey:focus {
 	color: #bebebe;
@@ -230,5 +264,59 @@ h1 {
 	color: #f1f1f1;
 	text-decoration: underline;
 }
+ .portfolio {
+ 	padding-top: 60px;
+ 	padding-left: 8.3%;
+ 	padding-right: 8.3%;
+ 	padding-bottom: 50px;
+ 	background: #202020 url(../image/portfolio-bg.jpg) no-repeat;
+ 	width: 100%;
+ 	height: 100%;
+  	background-size: cover;
+  	margin-bottom: 100px;
+ }
 
+.portfolio__heading {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: center;
+    color: #f1f1f1;
+}
+.portfolio__gallery {
+	display: flex;
+}
 
+@media (min-width: 1000px) and (max-width: 1500px) {
+
+	.portfolio__gallery-image:nth-child(9n+1) {
+    display: none;
+	}
+}
+.portfolio__gallery-image {
+	margin-bottom: 50px;
+	margin-right: 2.6%;
+}
+
+.contacts h2 {
+	font-family: 'Nexa Bold';
+}
+.contacts__social-icons {
+	text-align: center;
+}
+
+.contacts__social-icon {
+	display: inline-block;
+	vertical-align: baseline;
+	margin-right: 3%;
+}
+.contacts__social-icon:last-child {
+	margin-right: 0;
+}
+.contacts__social-icon:hover, .contacts__social-icon:focus {
+   opacity: 0.6;
+}
+.contacts__copyright {
+   font-size: 1.125rem;
+   color: #bebebe;
+   border-top: 2px solid #bebebe;
+}
